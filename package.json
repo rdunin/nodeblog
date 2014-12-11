@@ -1,0 +1,30 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "4.x",
+    "morgan": "~1.0.0",
+    "body-parser": "~1.0.0",
+    "method-override": "~1.0.0",
+    "jade": "latest",
+    "mongoose": "latest",
+    "config": "latest",
+    "passport": "latest",
+    "passport-local": "latest",
+    "crypto": "latest",
+    "express-session": "latest",
+    "cookie-parser": "latest",
+    "redis": "latest",
+    "connect-redis": "latest",
+    "connect-flash": "latest",
+    "socket.io": "latest",
+    "mongoosastic": "latest",
+    "iron-cache": "latest",
+    "node-serialize": "latest",
+    "iron_mq": "latest"
+  }
+}
