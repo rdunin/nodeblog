@@ -58,6 +58,23 @@ html(lang="en")
     // Placed at the end of the document so the pages load faster
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
     script(src="http://getbootstrap.com/dist/js/bootstrap.min.js")
+    script(src='http://techface.koding.io:8080/socket.io/socket.io.js')
+    script.
+            var chat = io.connect("http://techface.koding.io:8080/chat");
+            var news = io.connect("http://techface.koding.io:8080/news");
+            chat.on("chat", function(data) {
+                console.log(data);
+                $("body").append('<div class="alert alert-success alert-dismissable">' + data.msg + '</div>');
+            })
+            news.on("news", function(data) {
+                console.log(data);
+                $("body").append('<div class="alert alert-warning alert-dismissable">' + data.msg + '</div>');
+            })
+            var socket = io.connect("http://techface.koding.io:8080");
+            socket.on("news", function(data) {
+                $("body").append('<div class="alert alert-success alert-dismissable">' + data.msg + '</div>');
+            })
+    
     //script(src="http://getbootstrap.com/assets/js/docs.min.js")
     // IE10 viewport hack for Surface/desktop Windows 8 bug
     //script(src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js")
